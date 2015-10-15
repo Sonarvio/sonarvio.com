@@ -1,0 +1,156 @@
+/**
+ * Suggestions - Entry
+ * ===================
+ *
+ *
+ */
+
+$border-size = 2px;
+
+.Entry {
+
+	height: 160px - 2 * $border-size; // picture + 2 * borders
+	position: relative;
+
+	background-color: #FFF;
+	color: #000;
+
+  // background: gray;
+  border: $border-size solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+
+	margin: 20px 0;
+
+
+	&__Info {
+		display: flex;
+		height: 100%;
+	}
+
+	&__Cover {
+		lost-column: 1/3 0 0;
+		// display: inline-block;
+	}
+
+	&__Meta {
+		lost-column: 2/3 0 0;
+		// display: inline-block;
+		// display: none;
+	}
+
+	&__Picture {
+		width: 150px;
+		height: 150px;
+		display: block;
+		margin: auto;
+	}
+
+
+	&__Banner {
+		// design by: http://www.designcouch.com/home/why/2013/03/21/pure-css-ribbon-banner/
+
+		position: absolute;
+		bottom: 15px;
+		right: -20px;
+		overflow: visible;
+		/* so we can see the pseudo-elements we're going to add to the anchor */
+
+		font-size: 18px;
+		/* font-size and line-height must be equal so we can account for the height of the banner */
+
+		line-height: 18px;
+
+		&:before {
+		  content: "";
+		  height: 0;
+		  width: 0;
+		  display: block;
+		  position: absolute;
+		  top: 3px;
+		  left: 0;
+		  border-top: 29px solid rgba(0, 0, 0, .3);
+		  /* These 4 border properties create the first part of our drop-shadow */
+
+		  border-bottom: 29px solid rgba(0, 0, 0, .3);
+		  border-right: 29px solid rgba(0, 0, 0, .3);
+		  border-left: 29px solid transparent;
+		}
+
+		&:after {
+		  /* This adds the second part of our dropshadow */
+
+		  content: "";
+		  height: 3px;
+		  background: rgba(0, 0, 0, .3);
+		  display: block;
+		  position: absolute;
+		  bottom: -3px;
+		  left: 58px;
+		  right: 3px;
+		}
+
+	}
+
+	&__Link {
+
+		transition: none;
+
+		display: block;
+	  padding: 20px;
+	  position: relative;
+	  /* allows us to position our pseudo-elements properly */
+
+	  background: #0089d0;
+	  overflow: visible;
+	  height: 58px;
+	  margin-left: 29px;
+	  color: #fff;
+	  text-decoration: none;
+
+		&:after {
+		  /* this creates the "folded" part of our ribbon */
+
+		  content: "";
+		  height: 0;
+		  width: 0;
+		  display: block;
+		  position: absolute;
+		  bottom: -15px;
+		  right: 0;
+		  border-top: 15px solid #004a70;
+		  border-right: 15px solid transparent;
+		}
+
+		&:before {
+		  /* this creates the "forked" part of our ribbon */
+
+		  content: "";
+		  height: 0;
+		  width: 0;
+		  display: block;
+		  position: absolute;
+		  top: 0;
+		  left: -29px;
+		  border-top: 29px solid #0089d0;
+		  border-bottom: 29px solid #0089d0;
+		  border-right: 29px solid transparent;
+		  border-left: 29px solid transparent;
+		}
+
+		&:hover {
+		  background: #009ff1;
+		}
+
+		&:hover:before {
+		  /* this makes sure that the "forked" part of the ribbon changes color with the anchor on :hover */
+		  border-top: 29px solid #009ff1;
+		  border-bottom: 29px solid #009ff1;
+		}
+	}
+
+	// &__Media {
+	//
+	// }
+}
