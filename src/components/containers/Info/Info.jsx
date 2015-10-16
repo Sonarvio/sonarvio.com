@@ -33,7 +33,10 @@ export default class Info extends Component {
 							for further lookups.
 						</p>
 						<p>
-							All material and code is available at Github: <a href="http://github.com/Sonarvio" target="_blank">http://github.com/Sonarvio</a>
+							All material and code is available at <a href="http://github.com/Sonarvio" target="_blank">Github</a>.
+						</p>
+						<p>
+							The presentation from the BerlinJS talk can be found at <a href="http://slides.com/autarc/sonarvio/" target="_blank">Slides</a>.
 						</p>
 					</div>
 					<figure className="Info__Figure">
