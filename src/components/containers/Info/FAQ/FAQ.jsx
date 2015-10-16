@@ -5,6 +5,8 @@
 
 import React, { Component, PropTypes } from 'react'
 
+import ExtensionYoutube from './Extension-Youtube.png'
+
 import './FAQ.styl'
 
 
@@ -63,7 +65,7 @@ export default class FAQ extends Component {
 								aren't signed and available at the markets yet. They need to be installed manually in
 								developer mode by dragging the respective files into their browser window.
 								After the successfull installation you should	be able to access the interface at
-								videos on the different websites (e.g. <a href="/__/static/extension-youtube.png" target="_blank">Youtube</a>).
+								videos on the different websites (e.g. <a href={ExtensionYoutube} target="_blank">Youtube</a>).
 								Depending on the playtime it can take up a few minutes until the inital buffer is loaded.
 							</p>
 						</div>
