@@ -18,7 +18,7 @@ export default ({/** options **/}) => {
       <IndexRoute component={Containers}/>
       {/**
         TODO:
-        allow optiona '.html' extension
+        - allow optional '.html' extension ?
       **/}
       <Route path=":page" component={Containers}/>
     </Route>

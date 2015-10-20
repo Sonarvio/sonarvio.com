@@ -94,9 +94,9 @@ export default class FAQ extends Component {
 						<div className="FAQ__Answer">
 							<p>
 								Although a specific 'record' option is planned for an upcoming release, the system is still mainly build
-								around the idea of using the underlying binary data files. This approach allows the usage in speaker free
+								around the idea of using the underlying binary data of files. This approach allows the usage at speaker free
 								environments like public places or work. The suggestions is not completely disregarded, but definitely not
-								worked in the near future.
+								on the feature list at the moment.
 							</p>
 						</div>
 					</li>
