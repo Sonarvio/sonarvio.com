@@ -6,6 +6,8 @@
  */
 
 $color-link = #E45757;
+$color-button = #E45757;
+$color-button-active = #543B3B;
 
 
 .Media {
@@ -23,5 +25,23 @@ $color-link = #E45757;
 	&__Link {
 		color: $color-link;
 		text-decoration: none;
+	}
+
+
+	&__Button {
+		width: 100%;
+		padding: 10px;
+		margin: 30px 0;
+		font-size: 18px;
+
+		color: #FFF;
+		background-color: $color-button;
+		outline: none;
+		border: none;
+		cursor: pointer;
+
+		&:active {
+			background-color: $color-button-active;
+		}
 	}
 }

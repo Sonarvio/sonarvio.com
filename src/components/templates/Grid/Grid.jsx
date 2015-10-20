@@ -13,7 +13,9 @@ import { panel } from '../../../handler/creators'
 import './Grid.styl'
 
 
-// state prev
+/**
+ * [description]
+ */
 @connect(({ panel, router }) => ({
   size: panel.getIn(['size']),
   location: router.location
@@ -35,9 +37,7 @@ export default class Grid extends Component {
     return (
       <div className="Grid" style={{
         width,
-        // temporary exception
-        // height: location.pathname === '/' ? height : size || height
-        height: location.pathname === '/lyrics' ? (size || height) : height
+        height: size || height
       }}>
         {children.map((child, i) => {
           var perc = base

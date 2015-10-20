@@ -1,0 +1,64 @@
+/**
+ * Search
+ * ======
+ *
+ *
+ */
+
+$color-handle = #A9487E;
+$size-spinner = 50px;
+
+$color-button = #E45757;
+$color-button-active = #543B3B;
+
+
+.Search {
+
+	&__Spinner {
+		position: absolute;
+		z-index: 100;
+		top: 'calc(50% - %s)' % $size-spinner;
+		left: 'calc(50% - %s)' % $size-spinner;
+		height: $size-spinner;
+		width: $size-spinner;
+		animation: rotate 0.8s infinite linear;
+		border: 8px solid $color-handle;
+		border-right-color: transparent;
+		border-radius: 50%;
+	}
+
+	&__Input {
+		width: 100%;
+	}
+
+	&__Submit {
+		padding: 10px;
+		font-size: 18px;
+
+		margin: 0;
+		width: 100%;
+
+		color: #FFF;
+		background-color: $color-button;
+		outline: none;
+		border: none;
+		cursor: pointer;
+
+		&:active {
+			background-color: $color-button-active;
+		}
+	}
+
+	&__Error {
+		color: #F00;
+		background: #FFF;
+		padding: 10px;
+	}
+}
+
+
+
+@keyframes rotate {
+	0%    { transform: rotate(0deg); }
+	100%  { transform: rotate(360deg); }
+}
