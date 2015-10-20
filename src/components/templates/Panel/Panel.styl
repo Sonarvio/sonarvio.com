@@ -1,20 +1,31 @@
 /**
- * Tile
- * ====
+ * Panel
+ * =====
  *
  *
  */
 
-
-$panelColor = #737E92;
+$color-panel = #443D6C;
 $color-white = #FFF;
 
 
 .Panel {
 	height: 100%;
 	color: $color-white;
-	background-color: #443D6C;
   border: 1px solid $color-white;
+	background-color: $color-panel;
+
+	&__Box {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		opacity: 1;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
 
 	// Link
 	&__Trigger {
@@ -29,31 +40,47 @@ $color-white = #FFF;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
+
+		// hover effect from: http://trackingjs.com 	||		figure.effect
+		&::before, &::after {
+			position: absolute;
+		  top: 30px;
+		  right: 30px;
+		  bottom: 30px;
+		  left: 30px;
+		  content: '';
+			opacity: 0;
+		  transition: opacity .35s, transform .35s;
+			transition-delay: 100ms;
+		}
+
+		&::before {
+			transform: scale(0, 1);
+		  border-top: 1px solid $color-white;
+		  border-bottom: 1px solid $color-white;
+		}
+
+		&::after {
+			transform: scale(1, 0);
+		  border-right: 1px solid $color-white;
+		  border-left: 1px solid $color-white;
+		}
+
+		&:hover.Panel__Trigger::before,
+		&:hover.Panel__Trigger::after {
+			transform: scale(1);
+			opacity: 1;
+		}
 	}
-	// position elements in the center afterwards
 
 	&--active {
 		border: 1px solid $color-white !important;
 	}
 
-	&--active &__Trigger {
+	// &--active &__Trigger {
+	//
+	// }
 
-	}
-
-	&__Box {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		opacity: 1;
-
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-	}
-
-	// really just a wrapper for fading + containing content & close
 	&__View {
 		opacity: 0;
 		position: relative;
@@ -63,20 +90,17 @@ $color-white = #FFF;
 		opacity: 1;
 	}
 
-
 	&__Content {
 		// solution:
 		// - compute the new size and adjust the fullscreen defined grid container solution !
 	}
 
-	// predifinition for the icon
-	&__Icon {
-
-	}
+	// &__Icon {
+	//
+	// }
 
 	&__Title {
-		color: white;
-
+		color: #FFF;
 		text-align: center;
 		margin: 0;
 		padding: 20px;
@@ -92,8 +116,8 @@ $color-white = #FFF;
 		position: absolute;
 		width: 50px;
 		height: 50px;
-		top: -50px;
 		right: -200px;
+		top: -50px;
 
 		color: $color-white;
 	  font-size: 25px;

@@ -11,6 +11,7 @@ import classnames from 'classnames'
 
 import './Panel.styl'
 
+
 /**
  *
  */
@@ -56,22 +57,4 @@ export default class Panel extends Component {
 			</section>
 		)
 	}
-
 }
-
-// box  ~ only visible in small mode
-// content -> view defined for extended !
-
-
-
-// defines collapse state
-// toggleActive() {
-// 	// use the router/navigation store to close ! (not required to keep track of it else)
-// 	if (this.props.active) {
-// 		// use a simple store to distinguissh and let others commincate !
-// 		return console.log('--> handle close at parent level...')
-// 	}
-// 	// handle open -?> set route to open !
-// 	const page = this.props.title.toLowerCase()
-// 	console.log('set state to page: ', page);
-// }
