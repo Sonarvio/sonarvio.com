@@ -1,0 +1,5 @@
+#RewriteEngine On
+#RewriteRule ^(.*) http://localhost:8000/$1 [P]
+
+RewriteEngine On
+RewriteRule ^api/v1/(.*) http://localhost:9000/$1 [P]
